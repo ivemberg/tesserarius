@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Tesserarius – Carte fedeltà in un porta tessere di pelle</title>
+<meta name="description" content="Tesserarius tiene le carte fedeltà in un porta tessere di pelle sul telefono. Su iPhone Duo si apre come un portafoglio vero.">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+  :root {
+    --leather: #3a2414;
+    --leather-deep: #1f130a;
+    --cognac: #9a5a2c;
+    --stitch: #e8d9bf;
+    --ink: #f4eadb;
+    --muted: #cdb89c;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--leather-deep); }
+  body {
+    margin: 0;
+    color: var(--ink);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(255, 220, 170, 0.12), transparent 60%),
+      linear-gradient(rgba(58, 36, 20, 0.86), rgba(31, 19, 10, 0.92)),
+      url("leather.jpg") center / 512px repeat,
+      var(--leather);
+    min-height: 100vh;
+  }
+  .frame { max-width: 820px; margin: 0 auto; padding: 48px 16px 64px; }
+  header { text-align: center; margin-bottom: 36px; }
+  header img {
+    width: 112px; height: 112px; border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 0, 0, 0.4);
+  }
+  h1 { margin: 20px 0 4px; font-size: 32px; letter-spacing: 0.02em; font-weight: 700; }
+  .tagline { color: var(--muted); margin: 0 0 20px; font-size: 19px; }
+  nav { font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; }
+  nav a { color: var(--stitch); text-decoration: none; margin: 0 8px; }
+  nav a:hover { text-decoration: underline; }
+  .store {
+    display: inline-block; margin: 4px 0 18px; padding: 12px 24px; border-radius: 12px;
+    color: #2b1608; text-decoration: none; font-weight: 700; letter-spacing: 0.02em;
+    background: linear-gradient(#f6ead6, var(--stitch) 60%, #cdb894);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+  .note { color: var(--muted); font-size: 15px; margin: 0; }
+  .panel {
+    position: relative;
+    margin: 0 0 28px;
+    padding: 30px 30px 22px;
+    border-radius: 14px;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(0, 0, 0, 0.22)),
+      linear-gradient(rgba(154, 90, 44, 0.78), rgba(120, 66, 30, 0.82)),
+      url("leather.jpg") center / 384px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(0, 0, 0, 0.45);
+  }
+  .panel::before {
+    content: ""; position: absolute; inset: 9px; border-radius: 9px; pointer-events: none;
+    border: 2px dashed var(--stitch); opacity: 0.55;
+  }
+  h2 { margin: 0 0 12px; font-size: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--stitch); }
+  h3 { margin: 18px 0 4px; font-size: 17px; color: var(--stitch); }
+  p, li { margin: 0 0 10px; }
+  ul { padding-left: 20px; margin: 0 0 10px; }
+  a { color: var(--stitch); }
+  figure { margin: 18px 0 8px; }
+  figure img { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45); }
+  figcaption { color: var(--ink); opacity: 0.85; font-size: 15px; margin-top: 8px; text-align: center; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .pair figure { margin: 0; }
+  .lang { margin: 48px 0 20px; text-align: center; color: var(--muted); letter-spacing: 0.3em; font-size: 13px; text-transform: uppercase; }
+  .badge { text-align: center; margin: 32px 0 0; }
+  .badge img { vertical-align: middle; margin: 4px 6px; max-width: 100%; height: auto; }
+  footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 32px; }
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .frame { padding-top: 36px; }
+    .panel { padding: 24px 20px 16px; }
+    h1 { font-size: 26px; }
+    .pair { grid-template-columns: 1fr; }
+    .pair figure img { max-width: 280px; margin: 0 auto; }
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+  <header>
+    <img src="icon.png" alt="Icona di Tesserarius">
+    <h1>Tesserarius</h1>
+    <p class="tagline">Le tue carte fedeltà, in un porta tessere di pelle.</p>
+    <a class="store" href="https://apps.apple.com/app/id6832230698">Scarica su App Store</a>
+    <p class="note">Gratis per iPhone. Su Android arriva presto.</p>
+    <nav><a href="#come-funziona">Come funziona</a> · <a href="#duo">iPhone Duo</a> · <a href="#supporto">Supporto</a> · <a href="#english">English</a></nav>
+  </header>
+
+  <section class="panel" id="come-funziona">
+    <h2>Come funziona</h2>
+    <p>Ogni tessera sta nella sua tasca cucita, e ne vedi il bordo con il nome del negozio. La tocchi, esce dalla tasca, e lo schermo mostra il codice a barre grande e luminoso, pronto da passare alla cassa.</p>
+    <div class="pair">
+      <figure>
+        <img src="iphone-card.jpg" alt="Una tessera uscita dal porta tessere, con il codice a barre sotto" width="640" height="1391" loading="lazy">
+        <figcaption>La tessera esce dalla tasca.</figcaption>
+      </figure>
+      <div>
+        <h3>Aggiungere una tessera</h3>
+        <p>Inquadri il codice a barre con la fotocamera, lo leggi da una foto o scrivi il numero. Scegli il negozio da un catalogo di catene italiane e la tessera prende i suoi colori.</p>
+        <h3>Alla cassa</h3>
+        <p>La luminosità sale da sola mentre la tessera è fuori, e torna com'era quando la rimetti in tasca. Il codice si disegna sul telefono e funziona anche senza connessione.</p>
+        <h3>Il tuo porta tessere</h3>
+        <p>Sedici materiali, il colore del filo e della fodera, le tue iniziali impresse nella pelle. La luce segue l'inclinazione del telefono e, con l'uso, la pelle prende una patina.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="duo">
+    <h2>Su iPhone Duo</h2>
+    <p>Su iPhone Duo il porta tessere si comporta come un portafoglio vero.</p>
+    <figure>
+      <img src="duo-open.jpg" alt="Tesserarius su iPhone Duo aperto: le tessere a sinistra, quella scelta a destra con il codice a barre" width="1400" height="985" loading="lazy">
+      <figcaption>Aperto, diventa un libro di due pagine e la tessera esce sulla sua pagina.</figcaption>
+    </figure>
+    <div class="pair">
+      <div>
+        <h3>Mezzo piegato</h3>
+        <p>Il porta tessere resta nella metà in basso; la tessera e il suo codice stanno in piedi nella metà in alto, rivolti verso il cassiere.</p>
+        <h3>Chiuso</h3>
+        <p>Sullo schermo esterno c'è un porta tessere solo. Sugli altri iPhone è un unico porta tessere alto.</p>
+      </div>
+      <figure>
+        <img src="duo-closed.jpg" alt="Tesserarius sullo schermo esterno di iPhone Duo chiuso" width="640" height="931" loading="lazy">
+        <figcaption>Chiuso, sullo schermo esterno.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="panel" id="supporto">
+    <h2>Supporto e privacy</h2>
+    <p>Domande, un problema o un'idea? Scrivimi e ti rispondo appena posso: <a href="mailto:ivojuniorbettini@gmail.com?subject=Tesserarius">ivojuniorbettini@gmail.com</a></p>
+    <p>Le tessere restano sul telefono: niente account e niente server nostri. L'app è gratis, con un piccolo banner con annunci non personalizzati, mai mentre mostri una tessera; un acquisto unico lo toglie per sempre. Tutti i dettagli sono nell'<a href="https://ivemberg.github.io/tesserarius-catalogue/privacy/">informativa sulla privacy</a>.</p>
+  </section>
+
+  <div class="lang" id="english">English</div>
+
+  <section class="panel" lang="en">
+    <h2>A leather card holder for your loyalty cards</h2>
+    <p>Each card sits in its own stitched pocket, with the shop's name on the edge. Tap it, it slides out, and the screen shows its barcode, large and bright, ready for the till. Add cards by scanning the barcode, reading it from a photo or typing the number.</p>
+    <p>On iPhone Duo the holder behaves like a real wallet. Open flat, it becomes a two-page book and a card slides out onto its own page. Half-folded, the holder stays on the lower half while the card and its barcode stand up on the upper half, facing the cashier. Closed, the outer display shows a single holder.</p>
+    <p>Your cards stay on your phone: no account, no servers of ours. The app is free with a small non-personalised banner, never shown while a card is out; a one-off purchase removes it. <a href="https://ivemberg.github.io/tesserarius-catalogue/privacy/en/">Privacy policy</a> · <a href="mailto:ivojuniorbettini@gmail.com?subject=Tesserarius">ivojuniorbettini@gmail.com</a></p>
+    <p><a href="https://apps.apple.com/app/id6832230698">Download on the App Store</a></p>
+  </section>
+
+  <p class="badge"><a href="https://duoworthy.com/apps/tesserarius"><img src="duoworthy-tesserarius.svg" alt="Tesserarius on Duoworthy: Ready for iPhone Duo" width="225" height="44"></a></p>
+
+  <footer>Tesserarius non è affiliata ai negozi mostrati. I nomi nelle immagini sono di fantasia.<br>© 2026 Ivo Junior Bettini</footer>
+</div>
+</body>
+</html>
